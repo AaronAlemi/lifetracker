@@ -1,0 +1,16 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 300px;
+    background-color: lightblue;
+    
+}
+
+.Navbar .logo img {
+    max-height: 100px;
+}
+
+nav {
+    color:green
+}
