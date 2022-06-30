@@ -481,57 +481,57 @@ Here are the pieces of functionality that should be built out for the backend:
   - Time bring in a PostgreSQL database client as the application's persistence layer
   - Make sure the PostgreSQL server is running
   - Create two files at the root of the project:
-    - [ ] `lifetracker-schema.sql`
-      - [ ] This script should:
-        - [ ] Create a `users` table with the following columns:
-          - [ ] `id`
-          - [ ] `username`
-          - [ ] `password`
-          - [ ] `first_name`
-          - [ ] `last_name`
-          - [ ] `email`
-          - [ ] `created_at`
-          - [ ] `updated_at`
-        - [ ] Create a `nutrition` table with the following columns:
-          - [ ] `id`
-          - [ ] `name`
-          - [ ] `category`
-          - [ ] `calories`
-          - [ ] `image_url`
-          - [ ] `user_id`
-          - [ ] `created_at`
+    - [X] `lifetracker-schema.sql`
+      - [X] This script should:
+        - [X] Create a `users` table with the following columns:
+          - [X] `id`
+          - [X] `username`
+          - [X] `password`
+          - [X] `first_name`
+          - [X] `last_name`
+          - [X] `email`
+          - [X] `created_at`
+          - [X] `updated_at`
+        - [X] Create a `nutrition` table with the following columns:
+          - [X] `id`
+          - [X] `name`
+          - [X] `category`
+          - [X] `calories`
+          - [X] `image_url`
+          - [X] `user_id`
+          - [X] `created_at`
         - [ ] **Any other tables** that the application might depend on
-    - [ ] `lifetracker.sql`
-      - [ ] This script should:
-        - [ ] 1. Let the user know that they're about to delete the `lifetracker` db and prompt them to confirm that is what they want.
-        - [ ] 2. Drop the `lifetracker` database and then create a new `lifetracker` database, before connecting to the `lifetracker` database.
-        - [ ] 3. It should then run the `lifetracker-schema.sql` file.
+    - [X] `lifetracker.sql`
+      - [X] This script should:
+        - [X] 1. Let the user know that they're about to delete the `lifetracker` db and prompt them to confirm that is what they want.
+        - [X] 2. Drop the `lifetracker` database and then create a new `lifetracker` database, before connecting to the `lifetracker` database.
+        - [X] 3. It should then run the `lifetracker-schema.sql` file.
         - [ ] Follow the exact same steps for `1`, `2`, and `3`, but with the `lifetracker_test` database.
-  - [ ] Setup the database by running `psql -f lifetracker.sql`
-  - [ ] Create a new file at the root of the project called `db.js`. In that file:
-    - [ ] Import the `getDatabaseUri` function from the `config.js` file.
-    - [ ] Initialize a new postgres client with the `pg` package and connect to PostgreSQL using any necessary config variables.
-    - [ ] Connect to postgres and log a message to the terminal on success or failure.
-    - [ ] Export the connected database client
-  - [ ] Commit all work to `git`
-  - [ ] A database client is now ready to be used!
+  - [X] Setup the database by running `psql -f lifetracker.sql`
+  - [X] Create a new file at the root of the project called `db.js`. In that file:
+    - [X] Import the `getDatabaseUri` function from the `config.js` file.
+    - [X] Initialize a new postgres client with the `pg` package and connect to PostgreSQL using any necessary config variables.
+    - [X] Connect to postgres and log a message to the terminal on success or failure.
+    - [X] Export the connected database client
+  - [X] Commit all work to `git`
+  - [X] A database client is now ready to be used!
 - **Server**
   - [ ] Build out a bare-bones Express server with a healthcheck route and an adequate middleware pipeline.
-  - [ ] Create a `utils` directory
-    - [ ] In the `utils` directory, create an `errors.js` file.
-    - [ ] Create error classes inside the file that will be used throughout the app.
+  - [X] Create a `utils` directory
+    - [X] In the `utils` directory, create an `errors.js` file.
+    - [X] Create error classes inside the file that will be used throughout the app.
   - [ ] In the `app.test.js` file, write tests that:
     - [ ] Ensure that the Express application responds to `GET` requests to the `/` route with a JSON object of `{ "ping": "pong" }`
     - [ ] Check that middleware like `morgan` and `cors` exist, along with the JSON `body-parser` middleware from `express`
     - [ ] Include an `afterAll` hook that calls `await db.end()` so that any open database connections close when all the tests are finished.
-  - [ ] Add code to the `app.js` and `server.js` file to get a simple server running along with responding to `GET` requests to the `/` route
-  - [ ] Create error classes inside the `utils/errors.js` file.
-  - [ ] Add `404` and generic error handler middlewares to the `app.js` file.
-  - [ ] In the `server.js` file:
-    - [ ] Import the Express app and the `config.js` file
-    - [ ] Have the `app` listen on the port specified by `config.PORT`.
-  - [ ] Commit all work to `git`
-  - [ ] Test out the fancy new Express server by starting it up in a new terminal window!
+  - [X] Add code to the `app.js` and `server.js` file to get a simple server running along with responding to `GET` requests to the `/` route
+  - [X] Create error classes inside the `utils/errors.js` file.
+  - [X] Add `404` and generic error handler middlewares to the `app.js` file.
+  - [X] In the `server.js` file:
+    - [X] Import the Express app and the `config.js` file
+    - [X] Have the `app` listen on the port specified by `config.PORT`.
+  - [X] Commit all work to `git`
+  - [X] Test out the fancy new Express server by starting it up in a new terminal window!
 - **Common Test Configuration**
   - [ ] It would probably be helpful to create some common test functions that can be used throughout the application's testing suite.
   - [ ] Create a new directory called `tests`
@@ -557,7 +557,7 @@ Here are the pieces of functionality that should be built out for the backend:
   - [ ] Go ahead and build out a full-fledged authentication flow using PostgreSQL, `bcrypt`, and JSON Web Tokens. For it all to work, we'll need a `User` model, a `security` middleware, some `tokens` utility functions, and the appropriate `auth` routes.
   - [ ] Add new directories for `models`, `routes`, and `middleware`
   - [ ] The **User** model
-    - [ ] In the `models` directory, create two new files: `models/user.js` and `models/user.test.js`
+    - [X] In the `models` directory, create two new files: `models/user.js` and `models/user.test.js`
       - [ ] The `User` model should have **at least** the following static methods:
         - [ ] `login`
         - [ ] `register`
