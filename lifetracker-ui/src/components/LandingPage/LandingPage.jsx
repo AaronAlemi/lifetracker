@@ -4,8 +4,8 @@ import "./LandingPage.css"
 export default function LandingPage() {
 
   return (
-    <div class="landing-page">
-        <div class="hero">
+    <div className="landing-page">
+        <div className="hero">
             <img className="hero-img" src="http://codepath-lifetracker.surge.sh/static/media/smartwatch-screen-digital-device.e2983a85.svg" alt="hero img" />
             <div className="cta">
                 <h1>Life Tracker</h1>

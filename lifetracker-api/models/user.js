@@ -24,7 +24,8 @@ class User {
                 throw new BadRequestError(`Missing ${field} in request`)
             }
         })
-        //Lookup user in db by email
+        //  Lookup user in db by email
+            const user = await User.fetchUserByEmail(credentials.email)
          // if user is found, compare passwords submitted with db
          // if match, return the user
          if (user) {

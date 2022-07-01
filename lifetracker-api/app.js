@@ -2,6 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
 const authRoutes = require('./routes/auth')
+// const postRoutes = require("./routes/posts")
 
 const { NotFoundError } = require("./utils/errors")
 const security = require("./middleware/security")
@@ -18,7 +19,8 @@ app.use(morgan("tiny"))
 // If it does, attach the decoded user to res.locals
 app.use(security.extractUserFromJwt)
 
- app.use("/auth", authRoutes)
+app.use("/auth", authRoutes)
+// app.use("/posts", postRoutes)
 
 app.get("/", (req, res) => {
     res.status(200).send({ "ping": "pong" })

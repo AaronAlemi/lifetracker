@@ -4,7 +4,7 @@ const { createUserJwt } = require("../utils/tokens")
 const router = express.Router()
 const security = require("../middleware/security")
 
-router.post("./login", async (req, res, next) => {
+router.post("/login", async (req, res, next) => {
     try {
         const user = await User.login(req.body)
         const token = createUserJwt(user)
