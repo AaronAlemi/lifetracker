@@ -1,8 +1,20 @@
 const { BCRYPT_WORK_FACTOR } = require("../config")
+const bcrypt = require("bcrypt")
 const db = require("../db")
 const { BadRequestError, UnauthorizedError } = require("../utils/errors")
 
 class User {
+
+    static makePublicUser(user) {
+        return {
+            id: user.id,
+            username: user.username,
+            first_name: user.first_name,
+            last_name: user.last_name,
+            email: user.email
+        }
+    }
+
     static async login(credentials) {
         // User should submit email and pass
         // If either missing, throw error
@@ -61,13 +73,14 @@ class User {
                 first_name,
                 last_name
             )
-            VALUES ($1, $2, $3, $4)
-            RETURNING id, username, email, first_name, last_name;
-        `
-        [credentials.username, credentials.password, lowercasedEmail, credentials.first_name, credentials.last_name]
+            VALUES ($1, $2, $3, $4, $5)
+            RETURNING id, username, email, first_name, last_name, created_at;
+        `,
+        [credentials.username, hashedPw, lowercasedEmail, credentials.first_name, credentials.last_name]
         )
         // return the user
         const user = result.rows[0]
+        return user
     }
 
     static async fetchUserByEmail(email) {
@@ -75,9 +88,9 @@ class User {
             throw new BadRequestError("No email provided")
         }
 
-        const query = 'SELECT * FROM users WHERE email = $1'
+        const query = `SELECT * FROM users WHERE email = $1`
 
-        const result = await db.query(query, (email.toLowerCase()))
+        const result = await db.query(query, [email.toLowerCase()])
 
         const user = result.rows[0]
 
@@ -91,7 +104,7 @@ class User {
 
         const query = `SELECT * FROM users WHERE username = $1`
 
-        const result = await db.query(query, (username.toLowerCase()))
+        const result = await db.query(query, [username.toLowerCase()])
 
         const user = result.rows[0]
 

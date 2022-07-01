@@ -1,9 +1,10 @@
 const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
-// const authRoutes = require('./routes/auth')
+const authRoutes = require('./routes/auth')
 
 const { NotFoundError } = require("./utils/errors")
+const security = require("./middleware/security")
 
 const app = express()
 
@@ -13,12 +14,14 @@ app.use(cors())
 app.use(express.json())
 //tag request info
 app.use(morgan("tiny"))
+// Makes sure for every request, make sure a user or token exists in the authorization header
+// If it does, attach the decoded user to res.locals
+app.use(security.extractUserFromJwt)
 
-// app.use("/auth", authRoutes) **USE LATER**
+ app.use("/auth", authRoutes)
 
 app.get("/", (req, res) => {
     res.status(200).send({ "ping": "pong" })
-
 })
 
 // 404 Not Found Middleware
