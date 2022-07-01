@@ -1,34 +1,21 @@
-import { Link, useLocation } from "react-router-dom"
-import bottle_logo from "../../assets/bottle_logo.svg"
+import { Link } from "react-router-dom"
 import "./Navbar.css"
+import NavLinks from "components/Navlinks/NavLinks"
 
 export default function Navbar() {
-  const location = useLocation()
 
   return (
+
     <nav className="Navbar">
-      <ul className="logo">
-        <li>
+      <div className="content">
+        <div className="logo">
           <Link to="/">
-            <img src={bottle_logo} alt="logo" />
-            <h2>VACCINE HUB</h2>
+            <img src="http://codepath-lifetracker.surge.sh/static/media/codepath.70a9a31f.svg" alt="logo" />
           </Link>
-        </li>
-      </ul>
-      {location.pathname.indexOf("portal") === -1 ? (
-        <ul>
-          <li>
-            <Link to="/login">
-              <button className="btn ghost">Login</button>
-            </Link>
-          </li>
-          <li>
-            <Link to="/register">
-              <button className="btn primary">Register</button>
-            </Link>
-          </li>
-        </ul>
-      ) : null}
+        </div>
+        <NavLinks />
+      </div>
     </nav>
+
   )
 }
