@@ -8,6 +8,14 @@ Everywhere around us is data waiting to be collected and utilized. In recent yea
 
 This application will be built using the battle-tested PERN stack - PostgreSQL, Express, React, and Node.
 
+Week 4 Gif:
+
+
+
+https://user-images.githubusercontent.com/91973579/176980584-9c275dda-648f-4b5f-b2fb-f8fa8b47e975.mp4
+
+
+
 ## Goals
 
 Building this application you will accomplish the following:
@@ -20,6 +28,12 @@ Building this application you will accomplish the following:
 - [ ] Build multiple pages and forms that communicate with the server using HTTP requests
 - [ ] Store user-authenticated JWT tokens in the browser's local storage for persisted authentication
 - [ ] Employ useEffect and useState hooks to manage application state on the frontend
+
+
+
+### Open-source libraries used
+N/A
+
 
 ## Application Features
 
@@ -802,6 +816,18 @@ Here are the pieces of functionality that should be built out for the backend:
       - [ ] Implement the features outlined in the tests until they're all passing
   - [ ] Commit all work to `git`
 
+
 ## Wrapping Up and Resources
 
 This is a huge project and represents a complete application with user-owned resources. Accordingly, it can, should, and will test the limits of your capabilities. Do your best and don't be afraid to Google! Especially in regards to any SQL that might be tricky.
+
+
+## Reflection
+### Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
+I felt as though the topics in the labs somewhat helped with giving me a general understanding of SQL queries and how to implement an SQL database along with my backend. However, I also felt that I needed to learn a lot of stuff from scratch such as the web tokens and impleneting that into my registration and login functions in the backend.
+
+### If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+With more time I would have liked to make some more progress in integrating my backend into my frontend. I also would have liked to get more done on the frontend side with regards to the UI although I am currently saving that for last. Additionally, I would have also liked to implement the nutrition information, so that is something that I will have to work on in the future. 
+
+### Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+In the demo, i think my backend went well although I didn't have much to show for my frontend side as I didn't focus on that as much, so that could've been done better. I did notice some people made really nice UI's that used custom images and gradients, so if possible I would like to try and implement that into my project next week.
