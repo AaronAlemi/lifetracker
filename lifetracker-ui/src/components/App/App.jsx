@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <Navbar />
+        <Navbar isLoggedIn={isLoggedIn} />
         <Routes>
           <Route path="/" element={<LandingPage/>} />
           <Route path="/login" element={<LoginPage loginFormContent={loginFormContent} setLoginFormContent={setLoginFormContent} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>

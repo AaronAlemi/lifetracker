@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "./Navbar.css"
 import NavLinks from "components/Navlinks/NavLinks"
 
-export default function Navbar() {
+export default function Navbar({isLoggedIn}) {
 
   return (
 
@@ -13,7 +13,7 @@ export default function Navbar() {
             <img src="http://codepath-lifetracker.surge.sh/static/media/codepath.70a9a31f.svg" alt="logo" />
           </Link>
         </div>
-        <NavLinks />
+        <NavLinks isLoggedIn={isLoggedIn}/>
       </div>
     </nav>
 

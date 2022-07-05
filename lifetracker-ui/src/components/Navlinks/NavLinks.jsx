@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom"
 import "./NavLinks.css"
 
-export default function NavLinks() {
+export default function NavLinks( {isLoggedIn} ) {
+  console.log("Navlinks isloggedin: " + isLoggedIn)
 
   return (
     <ul className="nav-links">
@@ -17,12 +18,18 @@ export default function NavLinks() {
       <Link to="/sleep">
         <p>Sleep</p>
       </Link>
-      <Link to="/login">
-        <p>Login</p>
-      </Link>
-      <Link to="/register">
-        <p>Sign Up</p>
-      </Link>
+      {!isLoggedIn ? 
+        <>
+          <Link to="/login">
+            <p>Login</p>
+          </Link>
+          <Link to="/register">
+              <p>Register</p>
+          </Link>
+        </>
+        :
+        <p>Sign Out</p>
+      }
   </ul> 
   )
 }
