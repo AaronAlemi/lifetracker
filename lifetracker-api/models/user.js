@@ -18,7 +18,8 @@ class User {
     static async login(credentials) {
         // User should submit email and pass
         // If either missing, throw error
-        const requiredFields = ["email", "password"]
+        console.log(credentials)
+        const requiredFields = ['email', 'password']
         requiredFields.forEach(field => {
             if (!credentials.hasOwnProperty(field)) {
                 throw new BadRequestError(`Missing ${field} in request`)
@@ -45,7 +46,7 @@ class User {
         const requiredFields = ["username", "password", "email", "first_name", "last_name"]
         requiredFields.forEach(field => {
             if (!credentials.hasOwnProperty(field)) {
-                throw new BadRequestError("Missing " + {field} + " in request body.")
+                throw new BadRequestError("Missing " + field + " in request body.")
             }
         })
 

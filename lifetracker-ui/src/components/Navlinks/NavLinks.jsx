@@ -1,8 +1,17 @@
 import { Link, useLocation } from "react-router-dom"
+import apiClient from "../../services/apiClient"
 import "./NavLinks.css"
 
-export default function NavLinks( {isLoggedIn} ) {
+export default function NavLinks( {isLoggedIn, user, setUser} ) {
   console.log("Navlinks isloggedin: " + isLoggedIn)
+
+  async function appLogout()
+  {
+      await apiClient.logoutUser()
+      setUser({})
+  }
+
+  
 
   return (
     <ul className="nav-links">
@@ -18,7 +27,7 @@ export default function NavLinks( {isLoggedIn} ) {
       <Link to="/sleep">
         <p>Sleep</p>
       </Link>
-      {!isLoggedIn ? 
+      {!user.email ? 
         <>
           <Link to="/login">
             <p>Login</p>
@@ -28,8 +37,20 @@ export default function NavLinks( {isLoggedIn} ) {
           </Link>
         </>
         :
-        <p>Sign Out</p>
+        <button onClick={() => appLogout()}>Sign Out</button>
       }
   </ul> 
   )
 }
+
+
+{/*props.user?.email 
+  ? (
+    <Link to="/" className="nav-item-link"><button className="logout-button" id="nav-button" onClick={() => appLogout()}>Log Out</button></Link>
+  )
+  : (
+    <div className="nav-links">
+      <li className="nav-item"><Link to="/login" className="nav-item-link"><button id="nav-button">Login</button></Link></li>
+      <li className="nav-item"><Link to="/register" className="nav-item-link"><button id="nav-button">Sign Up</button></Link></li>
+    </div>
+  )*/}

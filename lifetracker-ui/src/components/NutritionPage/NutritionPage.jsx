@@ -4,8 +4,9 @@ import "./NutritionPage.css"
 export default function NutritionPage() {
 
   return (
-    <div className="not-found">
+    <div className="nutrition-page">
         <h>Nutrition Page</h>
+        <div class="Banner"><h1>Nutrition</h1></div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
 const authRoutes = require('./routes/auth')
+const nutritionRoutes = require('./routes/nutrition')
 // const postRoutes = require("./routes/posts")
 
 const { NotFoundError } = require("./utils/errors")
@@ -20,6 +21,7 @@ app.use(morgan("tiny"))
 app.use(security.extractUserFromJwt)
 
 app.use("/auth", authRoutes)
+app.use("/nutrition", nutritionRoutes)
 // app.use("/posts", postRoutes)
 
 app.get("/", (req, res) => {
