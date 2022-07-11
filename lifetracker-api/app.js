@@ -3,6 +3,7 @@ const cors = require("cors")
 const morgan = require("morgan")
 const authRoutes = require('./routes/auth')
 const nutritionRoutes = require('./routes/nutrition')
+const activivtyRoutes = require('./routes/activity')
 // const postRoutes = require("./routes/posts")
 
 const { NotFoundError } = require("./utils/errors")
@@ -22,6 +23,7 @@ app.use(security.extractUserFromJwt)
 
 app.use("/auth", authRoutes)
 app.use("/nutrition", nutritionRoutes)
+app.use("/activity", activivtyRoutes)
 // app.use("/posts", postRoutes)
 
 app.get("/", (req, res) => {

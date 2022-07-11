@@ -41,6 +41,7 @@ class Nutrition {
                         nutrition.calories,
                         nutrition.image_url,
                         nutrition.quantity,
+                        SUBSTRING (cast(nutrition.created_at AS TEXT), 1, 10) as date,
                         nutrition.created_at,
                         users.email
                 FROM    nutrition

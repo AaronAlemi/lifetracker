@@ -1,6 +1,6 @@
 import "./NutritionCard.css"
 
-export default function NutritionCard( {imageUrl, name, calories, quantity, createdAt, category} ) {
+export default function NutritionCard( {imageUrl, name, calories, quantity, createdAt, date, category} ) {
 
 return (
     <div className="nutrition-card">
@@ -19,7 +19,7 @@ return (
             </div>
         </div>
         <div class="card-meta">
-            <small className="createdAt">{createdAt}</small>
+            <small className="createdAt">{date}</small>
             <small className="category">{category}</small>
         </div>
     </div>

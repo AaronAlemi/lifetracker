@@ -60,6 +60,10 @@ export class ApiClient {
     return await this.request({endpoint: 'nutrition/create', method: 'POST', data: nutrition})
    }
 
+   async fetchActivityForUser() {
+    return await this.request({endpoint: 'activity', method: 'GET'})
+   }
+
 
 }
 

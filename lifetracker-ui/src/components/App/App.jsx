@@ -22,6 +22,7 @@ export default function App() {
   const [error, setError] = useState("")
   const [user, setUser] = useState({})
   const [nutrition, setNutrition] = useState([])
+  const [activity, setActivity] = useState({})
 
   
 
@@ -97,7 +98,7 @@ export default function App() {
           <Route path="/" element={<LandingPage/>} />
           <Route path="/login" element={<LoginPage loginFormContent={loginFormContent} setLoginFormContent={setLoginFormContent} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} user={user} setUser={setUser}/> }/>
           <Route path="/register" element={<RegistrationPage registrationFormContent={registrationFormContent} setRegistrationFormContent={setRegistrationFormContent} user={user} setUser={setUser}/>} />
-          <Route path="/activity" element={user.email ? <ActivityPage /> : <AccessForbidden/>} />
+          <Route path="/activity" element={user.email ? <ActivityPage activity={activity} setActivity={setActivity}/> : <AccessForbidden/>} />
           <Route path="exercise" element={user.email ? <h>Exercise Page</h> : <AccessForbidden/>} />
           <Route path="sleep" element={user.email ? <h>Sleep Page</h> : <AccessForbidden/>} />
           <Route path="/nutrition/*" element={user.email ? <NutritionPage nutrition={nutrition} setNutrition={setNutrition}/> : <AccessForbidden/>} />

@@ -1,8 +1,45 @@
 import { Link, useLocation } from "react-router-dom"
 import ActivityFeed from "components/ActivityFeed/ActivityFeed"
+import apiClient from "../../services/apiClient"
+import { useState, useEffect } from "react";
 import "./ActivityPage.css"
 
-export default function ActivityPage() {
+export default function ActivityPage({activity, setActivity}) {
+
+  /* const activity = apiClient.fetchActivityForUser()
+  const totalCaloriesPerDay = activity.caloriesPerDay
+  const avgCaloriesPerCategory = activity.caloriesPerCategory
+
+  console.log(activity)
+  console.log(totalCaloriesPerDay)
+  console.log(avgCaloriesPerCategory) */
+
+  useEffect(() => {
+    const fetchActivity = async () => {
+      console.log("fetching nutrition...")
+      try {
+        const res = await apiClient.fetchActivityForUser()
+        console.log(res)
+        console.log(res.data)
+        
+        if (res?.data) {
+          //setError(null)
+          setActivity(res.data)
+          console.log("Set activity!")
+          console.log(activtiy)
+        }
+      }
+      catch (error) {
+        console.log(error)
+        // const message = err?.response?.data?.error?.message
+        // other stuff from vid
+      }
+
+    } 
+    fetchActivity()
+
+  }, []) 
+
 
   return (
     <div className="activity-page">
@@ -16,7 +53,7 @@ export default function ActivityPage() {
          
             </div>
         </div> 
-        <ActivityFeed />
+        <ActivityFeed totalCaloriesPerDay={activity.caloriesPerDay} avgCaloriesPerCategory={activity.caloriesPerCategory}/>
       </div> 
     </div>
   )

@@ -14,6 +14,7 @@ export default function NutritionFeed({nutrition, setNutrition}) {
                 calories={nutritionItem.calories}
                 quantity={nutritionItem.quantity}
                 createdAt={nutritionItem.created_at}
+                date={nutritionItem.date}
                 category={nutritionItem.category} />
 
           
