@@ -88,7 +88,7 @@ export default function LoginForm( {loginFormContent, setLoginFormContent, isLog
           <button className="btn" onClick={handleOnSubmit}>Login</button>
         </div>
         <div className="footer">
-          <p>Don't have an account? Sign up <a href="/register">here.</a></p>
+          <p>Don't have an account? Sign up <Link to="/register">here.</Link></p>
         </div>
       </div>
     </div>

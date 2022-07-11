@@ -52,6 +52,14 @@ export class ApiClient {
         localStorage.setItem(this.token, "")
     }
 
+   async fetchNutritionForUser() {
+    return await this.request({endpoint: 'nutrition', method: 'GET'})
+   }
+
+   async createNutritionForUser(nutrition) {
+    return await this.request({endpoint: 'nutrition/create', method: 'POST', data: nutrition})
+   }
+
 
 }
 

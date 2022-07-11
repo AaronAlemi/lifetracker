@@ -1,21 +1,30 @@
 import { Link, useLocation } from "react-router-dom"
+import ActivityFeed from "components/ActivityFeed/ActivityFeed"
+import "./ActivityPage.css"
 
 export default function ActivityPage() {
 
   return (
     <div className="activity-page">
-        <h>Activity Page</h>
-        {/*
-        <div class="ActivityPage">
-          <div class="content">
-            <div class="actions">
-              <h2 class="heading">Activity Feed</h2>
-              <div class="buttons">
-                <button class="Button outline small outline gold ">Add Exercise</button>
-                <button class="Button outline small outline blue ">Log Sleep</button>
+      <div className="content">
+        <div class="actions">
+          <h2 class="heading">Activity Feed</h2>
+            <div class="buttons">
+              <Link to="/nutrition/create">
                 <button class="Button outline small outline aqua ">Record Nutrition</button>
-              </div>
+              </Link>
+         
             </div>
+        </div> 
+        <ActivityFeed />
+      </div> 
+    </div>
+  )
+}
+
+/* 
+
+
             <div class="stats">
               <div class="main">
                 <div class="SummaryStat large gold">
@@ -76,8 +85,4 @@ export default function ActivityPage() {
           </div>
         </div>
       </div>
-    </div>
-  </div> */}
-</div>
-  )
-}
+  </div> */

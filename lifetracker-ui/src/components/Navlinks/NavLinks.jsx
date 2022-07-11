@@ -30,10 +30,10 @@ export default function NavLinks( {isLoggedIn, user, setUser} ) {
       {!user.email ? 
         <>
           <Link to="/login">
-            <p>Login</p>
+            <button>Login</button>
           </Link>
           <Link to="/register">
-              <p>Register</p>
+              <button>Register</button>
           </Link>
         </>
         :
