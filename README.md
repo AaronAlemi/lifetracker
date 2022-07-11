@@ -1,4 +1,4 @@
-# Week 4 Assignment: Life Tracker
+# Week 5 Assignment: Life Tracker
 
 Submitted by: **Aaron Alemi**
 
@@ -19,7 +19,7 @@ Deployed Application: [Lifetracker Deployed Site](https://aaronalemi-lifetracker
 - [X] Users have access to an overview Activity page that show one summary statistic about each of the 3 types of activity tracked.
 - [X] The API should have a `security` middleware that only allows authenticated users to access resources and only allows users to access resources about themselves. 
 - [X] Users should have the ability to track at least **1** types of activities (i.e Nutrition, Exercise, Sleep, etc.). Each activity should be tracked on separate pages.
-- [ ] Deployed website with Heroku & Surge. 
+- [X] Deployed website with Heroku & Surge. 
 
 **Detailed Activity Page:**
 - [X] The detailed activity page should display a feed of all previous tracked activities.
@@ -44,9 +44,7 @@ https://user-images.githubusercontent.com/91973579/176980584-9c275dda-648f-4b5f-
 
 Week 5:
 
-
-https://user-images.githubusercontent.com/91973579/178084468-4c6a4928-bf39-4b83-823b-ec462c283fb4.mp4
-
+https://user-images.githubusercontent.com/91973579/178356211-c434c60a-22f9-4b4e-8b95-87c93e9f7f4d.mp4
 
 ### Reflection
 
