@@ -38,23 +38,41 @@ Implement any of the following features to improve the application:
 
 ### Walkthrough Video
 
+Week 4: 
 
 https://user-images.githubusercontent.com/91973579/176980584-9c275dda-648f-4b5f-b2fb-f8fa8b47e975.mp4
+
+Week 5:
+
+
+https://user-images.githubusercontent.com/91973579/178084468-4c6a4928-bf39-4b83-823b-ec462c283fb4.mp4
 
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
+Week 4:
 I felt as though the topics in the labs somewhat helped with giving me a general understanding of SQL queries and how to implement an SQL database along with my backend. However, I also felt that I needed to learn a lot of stuff from scratch such as the web tokens and impleneting that into my registration and login functions in the backend.
 
+Week 5:
+The topics in the labs did help me a little with regards to setting up my basic backend and handling basic authentication/authorization. However, I did have to learn everything else as I went along for the first time such as connecting my backend and frontend together as well as getting the backend authentication to work on my frontend.
+
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
-With more time I would have liked to make some more progress in integrating my backend into my frontend. I also would have liked to get more done on the frontend side with regards to the UI although I am currently saving that for last. Additionally, I would have also liked to implement the nutrition information, so that is something that I will have to work on in the future. 
+
+Week 4:
+With more time I would have liked to make some more progress in integrating my backend into my frontend. I also would have liked to get more done on the frontend side with regards to the UI although I am currently saving that for last. Additionally, I would have also liked to implement the nutrition information, so that is something that I will have to work on in the future.
+
+Week 5:
+With more time I would like to finish all the core features such as getting my nutrition information to show up on my front end, along with allowing the users to set nutrition information directly in the frontend as well. In addition, I would also like to be able to deploy it to Heroku and make the CSS look a bit nicer as well.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
+Week 4:
 In the demo, i think my backend went well although I didn't have much to show for my frontend side as I didn't focus on that as much, so that could've been done better. I did notice some people made really nice UI's that used custom images and gradients, so if possible I would like to try and implement that into my project next week.
+
+Week 5:
+In my demo I think my backend features were okay although I do need to work on my overall presenting skills more to only cover the important bits. I noticed some people had filters for their nutrition information which is a nice feature I could try and implement in mine.
 
 ### Open-source libraries used
 
@@ -64,4 +82,4 @@ In the demo, i think my backend went well although I didn't have much to show fo
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
-I would like to shout out my pod members Doris and Katherin as they were both very helpful in helping to to resolve several issues I was facing, both in regards to this project and Git as well. 
+I would like to shout out my pod members Doris and Katherin as they were both very helpful in helping to to resolve several issues I was facing, both in regards to this project and Git as well. In both weeks they have both been extremely helpful and collaborative and helped me tremendously.
